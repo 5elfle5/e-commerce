@@ -1,21 +1,16 @@
-import { type ChangeEvent, type FC, useState } from 'react';
-import { InputText } from 'primereact/inputtext';
-import { Button } from 'primereact/button';
+import { type FC } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
 
 export const App: FC = () => {
-  const [value, setValue] = useState('');
   return (
-    <main>
-      <h1 className="underline">Playground</h1>
-      <InputText
-        value={value}
-        onChange={(e: ChangeEvent<HTMLInputElement>) =>
-          setValue(e.target.value)
-        }
-      />
-      <Button label="Submit" />
-      <p>{value}</p>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
