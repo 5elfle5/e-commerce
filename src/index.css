@@ -3,10 +3,22 @@
 @import "primereact/resources/primereact.min.css";
 @import "primeicons/primeicons.css";
 
+body {
+  background-color: #eee;
+}
+
 .card {
   @apply p-4 bg-white rounded-lg shadow-md;
 }
 
 .justify-children {
   @apply flex justify-between items-center;
+}
+
+.h1 {
+  @apply text-3xl font-bold;
+}
+
+.h2 {
+  @apply text-2xl font-semibold;
 }
