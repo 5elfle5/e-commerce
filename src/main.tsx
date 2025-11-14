@@ -1,14 +1,11 @@
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-import "primereact/resources/themes/lara-light-indigo/theme.css"; 
-import "primereact/resources/primereact.min.css"; 
-import "primeicons/primeicons.css";
 import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query';
-import { StrictMode } from 'react';
+import './index.css'
+import { App } from './App.tsx'
 
 // 1. Create a client
 const queryClient = new QueryClient();
